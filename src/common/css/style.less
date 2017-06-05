@@ -1,0 +1,437 @@
+@lc_blue:#2D50B6;
+@lc_blue_lighten:#049EE4;
+@lc_gray:#EEEEEE;
+@lc_black:#444547;
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.clear:after {
+  content: '';
+  display: table;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.lf{float:left}
+.rt{float:right}
+a{
+  text-decoration: none;
+}
+//头部header
+.lc_container{
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+#lc_header{
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: @lc_blue;
+  .lc_container{
+    div{
+      height: 100%;
+      float: left;
+    }
+    .lc_logo{
+      width: 245px;
+      a{
+        display: inline-block;
+        margin-top: 15px;
+      }
+    }
+    .lc_header_list{
+      width: 380px;
+      margin:0 10px;
+      ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        li{
+          float: left;
+          width: 25%;
+          a{
+            display: inline-block;
+            color: #fff;
+            width: 100%;
+            line-height: 100px;
+            text-align: center;
+            height: 100%;
+            transition: all .3s linear;
+            &:hover{
+              background-color: lighten(@lc_blue,5%);
+            }
+          }
+          &.lc_header_active{
+            a{
+              background-color: lighten(@lc_blue,5%);
+            }
+          }
+        }
+      }
+    }
+    .lc_header_search_box{
+      line-height: 100px;
+      .lc_header_search{
+        position: relative;
+        input{
+          width: 225px;
+          padding: 10px 30px 10px 10px;
+          border-radius: 5px;
+          border: 0;
+        }
+        i{
+          position: absolute;
+          top: 40px;
+          right: 8px;
+          width: 18px;
+          height: 18px;
+          background: url("../image/icon/search.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .lc_header_btn{
+        margin: 0 15px;
+        a{
+          float: left;
+          color: #ffffff;
+          width: 60px;
+          line-height: 35px;
+          text-align: center;
+          margin: 32px 7px;
+          border-radius: 8px;
+          &.lc_zy{
+            background: #0488FA;
+          }
+          &.lc_sp{
+            background: #0073D7;
+          }
+          &:hover{
+            opacity: .8;
+          }
+        }
+      }
+    }
+    .lc_header_login{
+      line-height: 100px;
+      margin-left:10px ;
+      a{
+        color: #ffffff;
+        text-decoration: underline;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+//底部footer
+#lc_footer{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  .lc_footer_together{
+    height: 130px;
+    background: @lc_gray;
+    .lc_container{
+      padding: 20px 0;
+      position: relative;
+      p{
+        font-size: 18px;
+        font-weight: bold;
+        color: @lc_black;
+        margin-bottom: 20px;
+      }
+      ul{
+        width: 950px;
+        height: 60px;
+        overflow: hidden;
+        li{
+          float: left;
+          a{
+            display: inline-block;
+            color: lighten(@lc_black,10%);
+            margin-right: 25px;
+            line-height: 30px;
+            &:hover{
+              color: @lc_blue;
+            }
+          }
+        }
+      }
+      .lc_footer_callme{
+        position: absolute;
+        top: 35px;
+        right: 0;
+        p{
+          color: lighten(@lc_black,10%);
+          font-weight: normal;
+        }
+        i{
+          position: absolute;
+          top: 12px;
+          right: 130px;
+          width: 26px;
+          height: 26px;
+          background: url("../image/icon/tel.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  .lc_footer_copyright{
+    height: 70px;
+    background: @lc_black;
+    .lc_container{
+      padding: 10px 0;
+      ul{
+        width: 500px;
+        margin: 0 auto;
+        li{
+          float: left;
+          a{
+            color: #ffffff;
+            font-size: 12px;
+            display: inline-block;
+            padding: 2px 15px;
+            border-right: 1px solid #fff;
+            &:hover{
+              color: red;
+            }
+          }
+          &:last-child{
+            a{
+              border: 0;
+            }
+          }
+        }
+      }
+      p{
+        width: 500px;
+        text-align: center;
+        margin: 15px auto;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+}
+//公用主体容器
+.lc_main_container{
+  margin-bottom: 20px;
+  width: 100%;
+  .lc_container{
+    margin: 20px auto;
+    .lc_title{
+      a{
+        font-size: 18px;
+        &:hover{
+          color: @lc_blue_lighten;
+        }
+      }
+      padding: 10px 0;
+      width: 100%;
+      border-bottom: 1px solid #eeeeee;
+      margin-bottom: 20px;
+    }
+    ul{
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      li{
+        float: left;
+        width: 18%;
+        margin-right: 2.5%;
+        a{
+          display: block;
+          width: 100%;
+          .lc_img{
+            position: relative;
+            img{
+              width: 100%;
+              height: 156px;
+            }
+            i{
+              position: absolute;
+              width: 50px;
+              height: 50px;
+              background: url("../../common/image/icon/play.png") no-repeat;
+              background-size: cover;
+              top: 32%;
+              left: 40%;
+              opacity: .8;
+            }
+          }
+          .lc_detail{
+            height:36px ;
+            p{
+              margin: 8px 0;
+              font-size: 14px;
+              color: #141414;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            div{
+              .lc_price{
+                font-size: 14px;
+                color: #e85308;
+              }
+              div{
+                margin-left: 25px;
+                span{
+                  position: relative;
+                  font-size: 10px;
+                  color:#999999;
+                  //width: 48px;
+                  display: inline-block;
+                  text-align: right;
+                  //overflow: hidden;
+                  //text-overflow: ellipsis;
+                  //white-space: nowrap;
+                  i{
+                    position: absolute;
+                    top: 0;
+                    left: -13px;
+                    width: 10px;
+                    height: 10px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.lc_like{
+                  span{
+                    i{
+                      background-image: url("../../common/image/icon/like.png");
+                    }
+                  }
+                }
+                &.lc_talk{
+                  span{
+                    //width: 30px;
+                    i{
+                      background-image: url("../../common/image/icon/talk.png");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  //分页
+  .lc_page{
+    width: 47%;
+    margin: 20px auto;
+    a{
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      position: relative;
+      border: 1px solid #EEEEEE;
+      margin-right: 9px;
+      i{
+        position: absolute;
+        top:30%;
+        left: 45%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 14px;
+      }
+      &.lc_back{
+        background: #E3E3E3;
+        i{
+          background-image: url("../image/icon/lf-arrow-2.png");
+        }
+      }
+      &.lc_go{
+        background: #ffffff;
+        i{
+          background-image: url("../image/icon/right-arrow.png");
+        }
+      }
+    }
+    ul{
+      li{
+        float: left;
+        &.lc_page_active{
+          a{
+            background: @lc_blue_lighten;
+            color: #ffffff;
+          }
+        }
+        &.lc_page_more{
+          margin-right: 9px;
+        }
+      }
+    }
+  }
+}
+a{
+  img{
+    transition: all .2s linear;
+  }
+  &:hover{
+    img{
+      opacity: .8;
+    }
+  }
+}
+//视频中心右侧热门推荐
+.center_box{
+  .video_right{
+    .lc_main_container{
+      background: #F7F8F9;
+      width: 90%;
+      float: right;
+      .lc_container{
+        width: 90%;
+        margin: 0 auto;
+        p{
+          font-size: 16px;
+          padding: 15px;
+          box-sizing: border-box;
+        }
+        ul.video_rt_ul{
+          //height: 1230px!important;
+          li{
+            width: 100%;
+            margin: 10px 0;
+            a{
+              .lc_img{
+                img{
+                  height: 140px;
+                }
+              }
+              .lc_detail{
+                p{
+                  padding: 0;
+                  font-size: 12px;
+                }
+                div{
+                  .lc_price{
+                    font-size: 12px;
+                  }
+                  div{
+                    margin-left: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

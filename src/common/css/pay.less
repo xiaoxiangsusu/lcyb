@@ -1,0 +1,203 @@
+.pay_contaniner{
+    width: 1100px;
+    // min-height: 1000px;
+    box-sizing: border-box;
+    margin: 23px auto 243px auto;
+    background: #fff;
+    h2{
+        font-size: 24px;
+        color: #050505;
+        font-weight: bold;
+        height: 80px;
+        line-height: 80px;
+        margin-left: 51px;
+    }
+    .pay_list_handle{
+        box-sizing: border-box;
+        color: #050505;
+        padding: 0px 36px 0px 36px;
+        .handle_header{
+            display: block;
+            font-size: 14px;
+            background: #f5f5f5;
+            height: 25px;
+            line-height: 25px;
+            padding-left: 5px;
+            .order_num{
+                color: #a59c9c;
+            }
+        }
+        .pay_order_list{
+            margin-bottom: 20px;
+            tr{
+                border-bottom: 1px solid #ddd;
+                td{
+                  vertical-align: top;
+                }
+            }
+            .imgwrapper{
+                display: inline-block;
+                width: 120px;
+                height: 86px;
+                overflow: hidden;
+                img{
+                    max-width: 120px;
+                }
+            }
+            .pay_width160,.pay_width600,.pay_width268{
+                box-sizing: border-box;
+                height: 128px;
+                padding: 20px 0px;
+                overflow: hidden;
+            }
+            .pay_width160{
+                width: 160px;
+                padding: 20px;
+            }
+            .pay_width600{
+                width: 600px;
+                a{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    white-space: normal!important;
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    box-sizing: border-box;
+                    padding-right: 20px;
+                    line-height: 18px;
+                }
+            }
+            .pay_width268{
+                width: 268px;
+                .each_total_price{
+                    margin-top: 36px;
+                    text-align: center;
+                    .red_tip,.price{
+                        color: #f01414;
+                    }
+                }
+            }
+        }
+        .pay_way_group{
+            border-bottom: 1px solid #ddd;
+            .purch_way{
+                margin: 45px 0px;
+                display: inline-block;
+                padding: 0px 10px;
+                height: 40px;
+                line-height: 38px;
+                text-align: center;
+                background: #f5f5f5;
+                border: 1px solid #cfcfcf;
+                box-sizing: border-box;
+                cursor: default;
+                margin-right: 15px;
+                position: relative;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                -khtml-user-select: none;
+                user-select: none;
+                img{
+                  display: none;
+                  position: absolute;
+                  bottom: 0px;
+                  right: 0px;
+                }
+            }
+            .purch_way.active{
+                border: 2px solid #a5c85b;
+                color: #a5c85b;
+                background: #fff;
+                img{
+                  display: block;
+                }
+            }
+        }
+        .conclude_price{
+            text-align: right;
+            height: 140px;
+            .group_row{
+                font-size: 18px;
+                margin: 40px 0px;
+                .red_tip{
+                  color: #f01414;
+                  font-size: 20px;
+                }
+                .pay_btn{
+                    display: inline-block;
+                    color: #fff;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 140px;
+                    font-weight: 600;
+                    text-align: center;
+                    background: #f01400;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.pay_success_outer{
+    width: 600px;
+    height: 300px;
+    margin: 200px auto;
+    .tip_header{
+        font-weight: 600;
+        color: #5dbdfd;
+        text-align: center;
+        img{
+            margin-right: 15px;
+        }
+        img,span{
+            vertical-align: middle;
+            font-size: 20px;
+        }
+    }
+    table{
+        margin: 30px auto 50px auto;
+        .tip_label,.tip_detail{
+            font-size: 16px;
+            padding: 10px 0px;
+        }
+        .tip_label{
+            width: 115px;
+            text-align: right;
+        }
+        .tip_detail{
+            width: 220px;
+            padding-left: 30px;
+            box-sizing: border-box;
+        }
+        .tip_detail.price{
+            color: #f01414;
+            padding-left: 26px;
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+    .keep_stay_here{
+        text-align: center;
+        a{
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            width: 124px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            background: #54c628;
+            border-radius: 3px;
+        }
+        a.contact_us{
+            background: #fefefe;
+            color: #444;
+            border: 1px solid #ddd;
+            margin-left: 20px;
+        }
+    }
+}
